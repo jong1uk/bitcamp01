@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/order.css">
+</head>
+
+<body>
+  <div id="container">
+    <form action="asdf.jsp">
+      <fieldset>
+
+        <h1>프런트엔드 개발자 지원서</h1>
+        <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+        <hr>
+        <ul id="order">
+          <li>개인정보</li>
+          <li>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" placeholder="공백없이 입력하세요" autofocus>
+          </li>
+          <li>
+            <label for="phone">연락처</label>
+            <input type="tel" name="phone" id="phone">
+          </li>
+
+          <li>지원 분야</li>
+          <label> <input type="radio" value="c_1">웹 퍼블리싱</label>
+          <br>
+          <label> <input type="radio" value="c_2">웹 애플리케이션 개발</label>
+          <br>
+          <label> <input type="radio" value="c_3">개발 환경 개선</label>
+
+
+          <li>
+            <label for="memo">지원동기</label>
+            <textarea name="memo" id="memo" cols="40" rows="4" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+          </li>
+          <div>
+            <button type="submit">접수하기</button>
+            <button type="reset">다시쓰기</button>
+          </div>
+
+
+        </ul>
+    </form>
+    </fieldset>
+  </div>
+
+</body>
+
+</html>

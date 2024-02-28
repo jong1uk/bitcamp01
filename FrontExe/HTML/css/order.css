@@ -1,0 +1,97 @@
+* {
+  /* 문서 전체에 적용하는 스타일 */
+  box-sizing: border-box; /* 박스 사이즈 */
+  margin: 0; /* 마진 */
+  padding: 0; /* 패딩 */
+}
+#container {
+  width: 600px;
+  margin: 40px auto;
+}
+h1 {
+  font-size: 2em;
+  margin: 10px;
+}
+fieldset {
+  padding: 15px;
+}
+fieldset legend {
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+li {
+  margin: 10px;
+  /* font-weight: bold; */
+}
+#product input[type="number"] {
+  width: 30px;
+  margin-left: 10px;
+}
+#shipping li label {
+  width: 80px;
+  float: left;
+  text-align: left;
+}
+#register li label {
+  width: 110px;
+  float: left;
+  text-align: left;
+  font-weight: bold;
+}
+#order li label {
+  width: 100px;
+  float: left;
+  text-align: center;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+  height: 32px;
+  width: 300px;
+}
+input[type="radio"] {
+  width: 30px;
+  float: left;
+  text-align: center;
+}
+textarea[id="memo"] {
+  height: 100px;
+  width: 300px;
+}
+select[name="path"] {
+  height: 32px;
+  width: 100px;
+}
+input[type="checkbox"] {
+}
+/* '주문하기', '취소하기' 버튼 */
+form > div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+form > div > input[type="submit"],
+input[type="reset"] {
+  margin: 0 10px;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #ccc;
+  cursor: pointer;
+}
+button {
+  margin: 0 10px;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #ccc;
+  cursor: pointer;
+}
