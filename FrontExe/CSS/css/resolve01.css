@@ -1,0 +1,17 @@
+h1 {
+  background-color: #222;
+  background-size: auto;
+  color: #eee;
+  font-weight: bold;
+  font-size: 40px;
+  /* width: 220px; */
+  /* margin-left: 100%; */
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+li {
+  list-style: none;
+  color: blue;
+  font-size: 30px;
+}
