@@ -1,0 +1,55 @@
+body {
+}
+div {
+  border: 1px solid #222;
+  margin: 10px;
+}
+
+#container {
+  border: none;
+  margin: 20px auto;
+  align-content: center;
+
+  width: 40%;
+  min-width: 300px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  text-align: auto;
+}
+#description {
+  border-radius: 15px 15px 0px 0px;
+  padding: 10px;
+}
+#receipe {
+  border-radius: 0px;
+  padding: 10px;
+}
+#package {
+  border-radius: 0px 0px 15px 15px;
+  padding: 10px;
+}
+table,
+th,
+td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 10px;
+}
+ol {
+  margin-left: 15px;
+}
+
+th,
+td {
+  padding: 10px 20px;
+}
+
+h1,
+h2 {
+  /* background-color: tomato; */
+  margin-left: 15px;
+}
+p {
+  margin-left: 15px;
+}

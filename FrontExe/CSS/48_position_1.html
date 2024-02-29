@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* * {
+      margin: 0;
+      padding: 0;
+    } */
+
+    p {
+      width: 500px;
+      height: 200px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      line-height: 2;
+    }
+
+    #static {
+      position: static;
+      /* left: 50px;
+      top: 50px;
+      border-color: red; */
+      border: 3px solid tomato;
+    }
+
+    #relative-1 {
+      position: relative;
+      /* right: 100px;
+      top: 100px;
+      border-color: blue; */
+      border: 3px solid gold;
+    }
+
+    #relative-2 {
+      position: relative;
+      left: 100px;
+      top: -50px;
+      border: 3px solid salmon;
+    }
+
+    #fixed {
+      width: 300px;
+      height: 400px;
+      background: url('../images/cat.jpg');
+      position: fixed;
+      border: 3px solid seagreen;
+      right: 30px;
+      top: 30px;
+    }
+  </style>
+</head>
+<!-- 
+  [position]
+  static : 기본값, 문서의 흐름에 맞춰 배치
+  relative : static과 동일하지만, 위치값을 지정 가능
+  absolute : relative를 사용한 상위 요소를 기준으로 위치값을 지정
+  fixed : 브라우저 창을 기준으로 위치 지정
+-->
+
+<body>
+  <p id="static">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a earum voluptatem perferendis
+    assumenda
+    repellat
+    error omnis deleniti architecto, pariatur dolorem eum expedita, autem, tenetur eius porro est voluptates ipsa.</p>
+  <p id="relative-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a earum voluptatem perferendis
+    assumenda
+    repellat
+    error omnis deleniti architecto, pariatur dolorem eum expedita, autem, tenetur eius porro est voluptates ipsa.</p>
+  <p id="relative-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a earum voluptatem perferendis
+    assumenda
+    repellat
+    error omnis deleniti architecto, pariatur dolorem eum expedita, autem, tenetur eius porro est voluptates ipsa.</p>
+  <p id="fixed"></p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a earum voluptatem perferendis
+    assumenda
+    repellat
+    error omnis deleniti architecto, pariatur dolorem eum expedita, autem, tenetur eius porro est voluptates ipsa.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a earum voluptatem perferendis
+    assumenda
+    repellat
+    error omnis deleniti architecto, pariatur dolorem eum expedita, autem, tenetur eius porro est voluptates ipsa.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a earum voluptatem perferendis
+    assumenda
+    repellat
+    error omnis deleniti architecto, pariatur dolorem eum expedita, autem, tenetur eius porro est voluptates ipsa.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a earum voluptatem perferendis
+    assumenda
+    repellat
+    error omnis deleniti architecto, pariatur dolorem eum expedita, autem, tenetur eius porro est voluptates ipsa.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a earum voluptatem perferendis
+    assumenda
+    repellat
+    error omnis deleniti architecto, pariatur dolorem eum expedita, autem, tenetur eius porro est voluptates ipsa.</p>
+
+</body>
+
+</html>
