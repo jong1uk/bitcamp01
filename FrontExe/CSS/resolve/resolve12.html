@@ -10,16 +10,16 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
     }
 
     .header {
+      grid-column: span 2;
       font-size: 1.5em;
-      grid-column-end: -1;
     }
 
     h2 {
       text-align: start;
-      grid-column-start: 1;
     }
 
     h3 {
@@ -47,14 +47,11 @@
 
     }
 
-    .at1,
-    .at2,
-    .at3,
-    .at4 {
+    article {
       border: 1px solid #cfcfcf;
       margin: 10px;
       height: 200px;
-
+      display: inline block;
     }
   </style>
 </head>
