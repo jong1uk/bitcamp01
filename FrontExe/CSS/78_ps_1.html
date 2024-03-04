@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    .navi {
+      width: 960px;
+      height: 60px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .navi ul {
+      list-style: none;
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+
+    .navi ul li {
+      float: left;
+      width: 150px;
+      padding: 10px;
+    }
+
+    /*
+    :link - 방문하지 않는 링크 스타일 적용
+    :visited - 방문한 링크 스타일 적용
+    :hover - 마우스 위에
+    :active - 마우스 클릭
+    :focus - 초점
+
+    순서는 다음과 같이 정의한다.
+    순서가 바뀌면 스타일이 제대로 적용되지 않는다.
+
+    LoVe HAte
+
+    :link, :visited, :hover, :active
+    */
+
+    .navi a:link,
+    .navi a:visited {
+      display: block;
+      font-size: 14px;
+      color: black;
+      padding: 10px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navi a:hover,
+    .nvai a:focus {
+      background: #222;
+      color: #fff;
+    }
+
+    .navi a:active {
+      background: #f00;
+    }
+
+    .contents {
+      margin: 30px auto;
+      width: 600px;
+      padding: 20px;
+      border: 1px solid #222;
+      border-radius: 5px;
+    }
+
+    /* 해당 id로 링크했을 때 스타일 변경*/
+    #intro:target {
+      background: #9ac365;
+      color: #fff;
+    }
+
+    #room:target {
+      background: #ff9844;
+    }
+
+    #reservation:target {
+      background: #fff8dc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navi">
+      <ul>
+        <li><a href="#intro">이용 안내</a></li>
+        <li><a href="#room">객실 소개</a></li>
+        <li><a href="#reservation">예약 방법 및 요금</a></li>
+        <li><a href="79_ps_2.html">예약하기</a></li>
+      </ul>
+    </nav>
+    <div id="intro" class="contents">
+      <h2>이용 안내</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis omnis saepe officia nostrum quos. Perferendis,
+        error, nemo ratione, aliquid odit dicta ullam iure consectetur assumenda distinctio repudiandae facilis!
+        Architecto sed obcaecati, quis corporis ipsam voluptates incidunt, reprehenderit, suscipit aspernatur
+        voluptatibus eos quidem quae. Eligendi beatae aspernatur ipsam esse repudiandae, iusto dolor magni dolorum, nemo
+        corrupti sit in. Error, facere deleniti vitae pariatur architecto officia laudantium! Nam, accusamus aut ex
+        dolor animi temporibus a nulla tempora alias sint quod, ipsum necessitatibus ducimus amet quidem officiis quas
+        eos quisquam nesciunt nemo, odit similique? Error accusantium suscipit ipsum tempore dolore quia fugiat tempora
+        harum velit, impedit fuga, earum, doloribus ratione? Corporis nisi reprehenderit voluptates quisquam, error nam!
+        Voluptas perferendis odio sequi ut? Eum aspernatur ducimus aut sed. Accusantium ducimus molestias, fuga in nobis
+        molestiae ex? Voluptate dolorum error dolorem voluptas, impedit veniam dignissimos aliquam quisquam harum dolore
+        reprehenderit accusamus autem animi facilis dolores perspiciatis rem iusto. Consequatur consectetur facere
+        corrupti iure, molestias vitae reiciendis eaque magnam veniam, a sapiente qui labore saepe. Neque dolore tenetur
+        animi libero? Assumenda ad cumque mollitia dolorem dignissimos aperiam. Eaque ipsum consequuntur nam.
+        Distinctio, modi quia. Molestiae, tenetur dolores. Veniam aliquid exercitationem nemo ab cumque expedita
+        consequuntur enim.</p>
+    </div>
+    <div id="room" class="contents">
+      <h2>객실 소개</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo repellat amet saepe voluptatem nam
+        architecto quae aliquid nobis cumque quo quidem sequi est, nesciunt itaque porro! Iusto, sed. Ipsum nihil
+        possimus officia voluptatem maiores quidem deserunt provident doloribus voluptates rerum exercitationem, sint
+        ducimus debitis ex est ab in temporibus, quis sapiente! Doloremque deserunt nesciunt facilis, laborum quaerat
+        assumenda nostrum repellendus consequatur, ut excepturi dolores in numquam sunt, libero nobis velit officia.
+        Beatae illum cumque harum quas tempore itaque consequatur aspernatur quam maiores, corporis, vel modi similique
+        sed. Tempore voluptas minus placeat sit, animi neque aliquam saepe, quam laborum labore dicta? Doloremque
+        laboriosam ipsam non tempora illum ratione architecto dolor repellat inventore iusto, nam quaerat blanditiis
+        maiores nesciunt. Eaque at voluptate a dolore autem, earum quaerat reiciendis perferendis impedit, quos deserunt
+        blanditiis nesciunt iure in, animi nobis. Unde necessitatibus accusamus voluptatem numquam, voluptatum culpa
+        quisquam recusandae cum qui suscipit voluptates ullam impedit quia, autem aut quidem sunt quas porro? At,
+        accusamus qui aperiam cupiditate vitae tempore dolor temporibus tempora quam optio nam fugiat debitis a
+        inventore, veritatis obcaecati facere mollitia rerum perferendis quae? Praesentium amet quas odio incidunt,
+        delectus inventore nisi, sint quidem perferendis, quisquam molestias quo ratione? Doloremque, dolor quam?</p>
+    </div>
+    <div id="reservation" class="contents">
+      <h2>예약 방법 및 요금</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quae fugiat ipsam ipsa necessitatibus
+        exercitationem earum inventore? Culpa facere iure voluptatem velit praesentium rem natus cum enim alias dicta
+        deserunt maiores ad animi nemo minus, vitae eaque doloribus saepe ipsa veritatis mollitia placeat optio odio
+        molestiae. Tenetur sint reprehenderit ratione iusto quasi, quibusdam, eligendi nesciunt distinctio earum nulla
+        tempore! Quisquam nihil hic aliquam eos expedita, ducimus cupiditate repellendus illo, at assumenda odio. In
+        facilis odio quam eius? Provident vitae unde aliquid nobis officia corporis nesciunt odio modi, excepturi dicta
+        perferendis ipsa neque sit non nihil qui debitis possimus explicabo. Voluptatibus enim molestias mollitia sint
+        dignissimos atque? Laudantium vero rem consequatur soluta. Dolore praesentium dolores aut, beatae tempore quod!
+        Commodi ut ex quibusdam unde in qui excepturi sequi, fugit obcaecati libero nam consequuntur aspernatur
+        necessitatibus numquam nobis natus quo est perferendis a tenetur corporis eum? Ratione eos maxime exercitationem
+        blanditiis suscipit tempora aliquid. Saepe eos minima temporibus deleniti neque dicta vitae totam non, quidem
+        accusantium fuga voluptatibus dolorum incidunt quaerat optio illo autem, atque earum voluptas. Tenetur error
+        nobis inventore, odit officia maiores dignissimos? Laboriosam, ratione fugit facilis voluptate illum facere
+        voluptas laborum cumque aliquam, natus iusto tempore, a recusandae. Consectetur?</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
