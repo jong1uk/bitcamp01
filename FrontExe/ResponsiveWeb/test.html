@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: flex;
+      width: 100%;
+      text-align: center;
+      flex-flow: row wrap;
+    }
+    .box{
+      width: 50px;
+      height: 50px;
+      background-color: #3498db;
+      margin: 5px;
+
+    }
+    .box:nth-child(even) {
+      
+      animation: shuffle 2s ease-in-out infinite alternate;
+    }
+    .box:nth-child(odd) {
+      
+      /* animation: shuffle 2s ease-in-out infinite alternate; */
+    }
+
+    @keyframes shuffle {
+      0% {
+        transform: translate(0, 0);
+        align-content: flex-start;
+      }
+      25% {
+        /* transform: translate(150px, 0px); */
+      }
+      50% {
+        transform: translate(100px, 100px);
+      }
+      75% {
+        /* transform: translate(0, -50px); */
+      }
+      100% {
+        transform: translate(200px, 200px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
+
+</body>
+</html>
