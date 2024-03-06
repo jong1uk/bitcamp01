@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color:#eee;
+  font-size:16px;
+  /* unsplash:v3Jod2iGmoA */
+
+position: absolute;
+width: 1440px;
+height: 1920px;
+left: 240px;
+top: -461px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+
+}
+#wrapper{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap:1rem;
+}
+.card {
+  background-color:#fff;
+  box-shadow:0px 1px 5px #222;
+}
+.card > header {
+  font-size:1.5rem;
+  padding:0.5rem;
+}
+.card > p {
+  padding:0.5rem;
+  line-height:1.6em;
+}
+img {
+  max-width:100%;
+}
+
