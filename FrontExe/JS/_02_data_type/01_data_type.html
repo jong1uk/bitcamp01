@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /* 
+    javascript와 python은 값이 전달될 때 자료형이 결정된다.
+    이것을 '동적 타입 언어' 라고 한다.
+    -정적 타입 언어 : 정확한 자료형에는 정확한 값이 전달되어야 한다.
+                  C, C++, Java, C#
+                   장점 : 처음부터 정확한 문법으의 표현을 중요시
+                         규칙을 중요시
+                         설계, 규약, 규격, 
+                         보수적, 기계적, 과업지향적
+                         재사용성 용이
+                         객체지향 프로그래밍
+
+    -동적 타입 언어 : 값이 전달될 때 데이터 타입이 결정된다.
+                   장점 : 문법의 규약이 느슨한 편
+                         규칙 < 사용
+                         진보적, 인간중심적
+                   단점 : 에러 체크에 어려움
+                         단일 사용의 어려움 -> 다른 언어와 함께 사용
+                         재사용 어려움
+                         함수형 프로그래밍
+                         요구사항을 빠르게 구현 가능함
+                   */
+    let name = '홍길동'
+    console.log(name);
+    console.log(typeof(name));
+    console.log(typeof name);
+
+    let num = 100;
+    console.log(num);
+    console.log(typeof(num));
+    console.log(typeof num);
+
+    var name2 = '홍길동'
+    console.log(name);
+    console.log(typeof(name));
+    console.log(typeof name);
+
+    var num2 = 100;
+    console.log(num);
+    console.log(typeof(num));
+    console.log(typeof num);
+
+    num = 200;
+    num2 = 200;
+    name = 'let김길동';
+    name2 = 'var김길동';
+    console.log(name);
+    console.log(typeof(name));
+    console.log(num);
+    console.log(typeof(num));
+    console.log(name2);
+    console.log(typeof(name2));
+    console.log(num2);
+    console.log(typeof(num2));
+
+    let val = true;
+    console.log(val);
+    console.log(typeof(val));
+
+    val = 10;
+    console.log(val);
+    console.log(typeof(val));
+
+    name = 20;
+    console.log(name);
+    console.log(typeof(name));
+
+    const num3 = 10;
+    console.log(num3);
+    console.log(typeof num3)
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
