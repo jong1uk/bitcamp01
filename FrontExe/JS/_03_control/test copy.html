@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    #panel {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #999;
+        position: relative;
+    }
+
+    #fish {
+        position: absolute;
+        left: 50px;
+        top: 200px;
+    }
+
+    #nav {
+        text-align: center;
+        width: 600px;
+    }
+</style>
+
+<body>
+    <div id="panel">
+        <img src="../../images2/fish.png" id="fish" />
+        <!-- style="left: 50px;" -->
+    </div>
+    <script>
+        // document의 html DOM의 로딩이 완료되면 함수가 호출되도록 함수를 등록시켜준다.
+        document.addEventListener("DOMContentLoaded", () => {
+            let fish = document.querySelector("#fish");
+            console.log('fish'+fish)
+            console.log('fish.style'+fish.style)
+            console.log('fish.style.left'+fish.style.left)
+            let left = 50;
+            let top = 200;
+            let moveXY = 10;
+
+            let test;
+            test = fish.style.left;
+            console.log("test(fish.style.left) > " + test);
+            // fish.style.left을 변수하나 만들어 저장하면 빈 문자열로 반환된다.("")
+
+
+            console.log("Number로 형변환-------------------------------")
+            test = (Number)(fish.style.left.slice(0, -2));
+            console.log("test(Number) >>> " + test)
+            console.log("typeof(test) > " + typeof (test)); //  Number로 형변환 했을때 타입
+
+            console.log("parseInt로 형변환 -------------------------------")
+            test = (parseInt)(fish.style.left.slice(0, -2));
+            console.log("test(parseInt) >>> " + test)
+            console.log("typeof(test) > " + typeof (test)); // parseInt로 형변환 했을때 타입
+
+            // ID가 "fish"인 요소 가져오기
+            var fishElement = document.querySelector("#fish");
+
+            // 현재 적용된 스타일 속성 가져오기
+            var computedStyle = window.getComputedStyle(fishElement);
+
+            // 너비와 높이 값 가져오기
+            var actualWidth = computedStyle.width;
+            var actualHeight = computedStyle.height;
+
+            // 콘솔에 출력해보기
+            console.log("Actual Width: " + actualWidth);
+            console.log("Actual Height: " + actualHeight);
+
+
+        });
+    </script>
+</body>
+
+</html>

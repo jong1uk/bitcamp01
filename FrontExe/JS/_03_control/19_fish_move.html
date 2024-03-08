@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #panel{
+      width: 800px;
+      height: 800px;
+      border: 1px solid #999999;
+      position: relative;
+      background-color: #75b3e2;
+    }
+    #fish{
+      position: absolute;
+      left: 50px;
+      top: 120px;
+    }
+    #nav{
+      text-align: center;
+      width: 600px;
+    }
+  </style>
+  <script>
+  
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const fish = document.getElementById('fish');
+      let x = 50;
+      let y = 120;
+      const LEFT_KEY = 37;
+      const RIGHT_KEY = 39;
+      const UP_KEY = 38;
+      const DOWN_KEY = 40;
+      const MOVE_POINT = 30;
+      const PANEL_WIDTH = 800;
+      const PANEL_HEIGHT = 800;
+      const fish_width = 120;
+      const fish_height = 70;
+      
+      document.addEventListener('keydown', function (e) {
+    
+        console.log('입력 키 코드: ' + e.keyCode);
+        switch (e.keyCode) {
+          case LEFT_KEY:
+            console.log('방향키 좌 입력');
+            x-=MOVE_POINT;
+            fish.style.left = x + 'px';
+            fish.style.transform = 'skewX(15deg)';
+            fish.style.transition= 'all 1s';
+            break;
+          case RIGHT_KEY:
+            console.log('방향키 우 입력');
+            x+=MOVE_POINT;
+            fish.style.left = x + 'px';
+            fish.style.transform = 'skewX(-15deg)';
+            fish.style.transition= 'all 1s';
+            break;
+          case UP_KEY:
+            console.log('방향키 상 입력');
+            y-=MOVE_POINT;
+            fish.style.top = y + 'px';
+            fish.style.transform= 'rotateX(35deg)';
+            fish.style.transition= 'all 1s';
+            break;
+          case DOWN_KEY:
+            console.log('방향키 하 입력');
+            y+=MOVE_POINT;
+            fish.style.top = y + 'px';
+            fish.style.transform= 'rotateX(45deg)';
+            fish.style.transition= 'all 1s';
+            break;
+
+        }
+        // panel 영역 제한
+        if (x < 0) { x = 0 ;
+        } else if (x > PANEL_WIDTH - fish_width ) { x = PANEL_WIDTH - fish_width} 
+        
+        if (y < 0) { y = 0 ;
+        }else if (y > PANEL_HEIGHT - fish_height ) { x = PANEL_HEIGHT - fish_height}
+        
+        
+
+    
+        // 물고기 위치 이동
+        console.log(`fish 위치 : x=${x}, y=${y}`);
+        console.log($fish.style.left );
+        console.log($fish.style.top );
+        $fish.style.left = x+'px';
+        $fish.style.left = y+'px';
+
+      })
+    })
+  </script>
+</head>
+
+<body>
+    <div id="panel">
+    <img src="../../images2/fish.png" id="fish">
+  </div>
+
+</body>
+
+</html>
