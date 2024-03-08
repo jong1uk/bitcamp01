@@ -3,88 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
     .container {
       display: flex;
-      width: 100%;
-      text-align: center;
-      /* flex-flow: row wrap; */
+      flex-wrap: wrap;
+      /* flex-direction: row; */
+      justify-content: center;
+      border: 1px solid black;
+      /* position: relative; */
+      
     }
-  
-    .box{
-      flex-flow: row wrap;
-
+    #item {
+      flex-direction: row;
+      width: 400px;
+      height: 300px;
+      border: 1px solid #333333;
+      margin: 20px auto;
+      /* position: absolute; */
+      
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      /* flex-direction: row; */
+      justify-content: center;
+      border: 1px dotted red;
+      /* position: absolute; */
+      
+    }
+    li{
+      display: block;
       width: 100px;
       height: 100px;
-      background-color: #3498db;
-      /* margin: 5px; */
+      border-radius: 100px;
+      background-color: rgb(44, 199, 88);
+      /* justify-content: center; */
+      border: 1px solid black;
+      margin: 10px 10px;
+      /* position: absolute; */
+      /* animation: circle 3s infinite; */
     }
-    .box1 {
-      
-      width: 100px;
-      height: 100px;
-      background-color: black;
-      flex-flow: column nowrap;
-    }
-    .box:nth-child(even) {
-      
-      animation: shuffle 2s ease-in-out infinite alternate;
-      
-    }
-    .box:nth-child(odd) {
-      
-      animation: shuffle2 2s ease-in-out infinite alternate;
-    }
+    @keyframes circle {
+      from{position: relative;
+      }
 
-    @keyframes shuffle {
-      0% {
-        transform: translate(0, 0);
+      to{
+      
+      top: 300px;
+      
       }
-      25% {
-        transform: translate(0px, 200px);
-      }
-      50% {
-        transform: translate(200px, 200px);
-      }
-      100% {
-        transform: translate(200px, 0px);
-        width: 200px;
-      }
-    }
-    @keyframes shuffle2 {
-      0% {
-        transform: translate(0, 0);
-      }
-    
-      100% {
-        transform: translate(200px, 0px);
-      }
+      
     }
   </style>
 </head>
 <body>
-
-<div class="container">
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <!-- <div class="box1"></div>
-  <div class="box1"></div>
-  <div class="box1"></div>
-  <div class="box1"></div>
-  <div class="box1"></div>
-  <div class="box1"></div>
-  <div class="box1"></div>
-  <div class="box1"></div>
-  <div class="box1"></div> -->
-
-</div>
-
+  <div class="container">
+    <div id="item">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="item">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="item">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="item">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="item">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="item">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  
 </body>
 </html>
