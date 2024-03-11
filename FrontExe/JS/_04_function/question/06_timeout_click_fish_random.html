@@ -17,7 +17,7 @@
 
         #score {
             /* margin: 50px; */
-     
+
             vertical-align: middle;
         }
 
@@ -28,6 +28,8 @@
             border: 1px solid #999;
             position: relative;
             background-color: #22aaf4;
+            background: url(../../../images2/6640387.jpg);
+            background-size: cover;
         }
 
         #bar {
@@ -43,6 +45,7 @@
             position: absolute;
             left: 50px;
             top: 230px;
+            animation: move all 2s ease-in-out;
 
         }
 
@@ -51,45 +54,89 @@
             text-align: center;
             width: 600px;
         }
+
+        button {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            color: #eeeeee;
+            background-color: #393a54;
+            border: 1px solid #eeeee3;
+        }
+
+        @keyframes move{
+            from {
+                
+
+            }
+            to{
+                left : 100px;
+                top : 100px;
+            }
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let $fish = document.querySelector('#fish');
             let $btn1 = document.querySelector('#btn1');
             const MOVE_VAL = 50;
-            const MAX_X = 430;
-            const MIN_X = 50;
-            let step = MOVE_VAL;
+            const MAX_X = 480;
+            const MIN_X = 0;
+            const MAX_Y = 480;
+            const MIN_Y = 0;
+            let stepX = MOVE_VAL;
+            let stepY = MOVE_VAL;
             let isOn;
             let id;
             let count = 0;
+
 
             $btn1.addEventListener('click', () => {
                 let x;
                 isOn = true;
                 $btn1.disabled = 'true'
+
                 if (isOn == true)
                     id = setInterval(() => {
-                        x = $fish.getBoundingClientRect().left + step;
+                        let randomMoveX = Math.floor(Math.random() * MAX_X + 1);
+                        let randomMoveY = Math.floor(Math.random() * MAX_Y + 1);
+                        let stepX = randomMoveX;
+                        let stepY = randomMoveY;
+
+                        x = stepX;
+                        y = stepY;
                         if (x >= MAX_X) {
                             x = MAX_X;
                             $fish.setAttribute('src', '../../../images2/fish2.png');
-                            step = -MOVE_VAL;
+                            stepX = -randomMoveX;
                         }
                         else if (x < MIN_X) {
                             x = MIN_X;
                             $fish.setAttribute('src', '../../../images2/fish1.png');
-                            step = MOVE_VAL;
+                            stepX = randomMoveX;
                         }
+                        else if (x < MIN_Y) {
+                            x = MIN_X;
+                            $fish.setAttribute('src', '../../../images2/fish1.png');
+                            stepY = -randomMoveY;
+                        }
+                        else if (x >= MAX_Y) {
+                            x = MIN_X;
+                            $fish.setAttribute('src', '../../../images2/fish1.png');
+                            stepY = randomMoveY;
+                        }
+
+                        // x, y 좌표 반영
                         $fish.style.left = x + 'px';
-                    }, 100);
+                        $fish.style.top = y + 'px';
+                    }, 500);
                 setTimeout(() => {
                     alert('게임이 종료되었습니다.');
                     clearInterval(id); // id에 해당하는 타이머 종료
                     $btn1.disabled = !$btn1.disabled;
                     isOn = false;
                     count = 0;
-                }, 5000);
+                }, 50000);
             }) // btn1 버튼 비활성화
 
             $fish.addEventListener('click', () => {
@@ -106,10 +153,10 @@
 
 <body>
     <div class="container">
-        <div>현재 점수 : <span id = "score"> 0</span></div>
+        <div>현재 점수 : <span id="score"> 0</span></div>
         <div id="panel">
             <img src="../../../images2/fish1.png" id="fish">
-            <div id="bar"></div>
+            <!-- <div id="bar"></div> -->
         </div>
         <div id="nav">
             <button id="btn1">start</button>

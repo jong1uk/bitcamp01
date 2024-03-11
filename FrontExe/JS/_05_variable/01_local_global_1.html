@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n = '홍길동'; // 전역변수
+
+        function test() {
+            var n = '임꺽정'; // 지역변수
+            console.log(n);
+        }
+        console.log(n);
+        test();
+        console.log(n);
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
