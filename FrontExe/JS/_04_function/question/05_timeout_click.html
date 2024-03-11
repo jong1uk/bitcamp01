@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 20 auto;
+
+
+        }
+
+        #output {
+            /* margin: 50px; */
+            font-size: 50px;
+            text-indent: 300px;
+            line-height: 200px;
+            vertical-align: middle;
+        }
+
+        #panel {
+
+            width: 600px;
+            height: 600px;
+            border: 1px solid #999;
+            position: relative;
+            background-color: #22aaf4;
+        }
+
+        #bar {
+            position: absolute;
+            left: 50px;
+            top: 300px;
+            width: 500px;
+            height: 20px;
+            background: rgb(84, 238, 210);
+        }
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 230px;
+
+        }
+
+        #nav {
+            margin-top: 20px;
+            text-align: center;
+            width: 600px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $fish = document.querySelector('#fish');
+            let $btn1 = document.querySelector('#btn1');
+            const MOVE_VAL = 50;
+            const MAX_X = 430;
+            const MIN_X = 50;
+            let step = MOVE_VAL;
+            let isOn;
+            let id;
+            let count = 0;
+
+            $btn1.addEventListener('click', () => {
+                let x;
+                isOn = true;
+                $btn1.disabled = 'true'
+                if (isOn == true)
+                    id = setInterval(() => {
+                        x = $fish.getBoundingClientRect().left + step;
+                        if (x >= MAX_X) {
+                            x = MAX_X;
+                            $fish.setAttribute('src', '../../../images2/fish2.png');
+                            step = -MOVE_VAL;
+                        }
+                        else if (x < MIN_X) {
+                            x = MIN_X;
+                            $fish.setAttribute('src', '../../../images2/fish1.png');
+                            step = MOVE_VAL;
+                        }
+                        $fish.style.left = x + 'px';
+                    }, 100);
+                setTimeout(() => {
+                    console.log('타이머를 종료합니다.');
+                    clearInterval(id); // id에 해당하는 타이머 종료
+                    $btn1.disabled = !$btn1.disabled;
+                    isOn = false;
+                    count = 0;
+                }, 5000);
+            }) // btn1 버튼 비활성화
+
+            $fish.addEventListener('click', () => {
+
+                let $output = document.querySelector('#output');
+                const $btn = document.querySelector('#btn');
+                if (isOn == true)
+                    $output.textContent = ++count;
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="output">0</div>
+        <div id="panel">
+            <img src="../../../images2/fish1.png" id="fish">
+            <div id="bar"></div>
+        </div>
+        <div id="nav">
+            <button id="btn1">start</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- 물고기를 상자에 띄우고
+물고기를 5초안에 최대한 클릭할 것
+클릭한 횟수가 상자 위에 출력될것
+5초가 지나면 더 이상 클릭횟수 증가x -->

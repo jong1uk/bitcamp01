@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #output {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: #83d360;
+    margin: 50px auto;
+    font-size: 50px;
+    text-align: center;
+    line-height: 300px;
+    vertical-align: middle;
+  }
+
+  #btn {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #ddd;
+    display: block;
+    margin: 50px auto;
+  }
+</style>
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const $output = document.querySelector('#output');
+    const $btn = document.querySelector('#btn');
+    let count = 0;
+    let id; // 타이머 핸들
+    let isOn;
+
+    id = setInterval(() => {
+      $output.textContent = ++count;
+      isOn = true;
+    }, 100);
+
+    $btn.addEventListener("click", () => {
+      // if (isOn === true) {
+      //   clearInterval(id); // id에 해당하는 타이머 종료
+      //   isOn = false;
+      //   $btn.textContent = '시작';
+
+      // } else if (isOn === false) {
+      //   id = setInterval(() => {
+      //     $output.textContent = ++count;
+      //     isOn = true;
+      //     $btn.textContent = '중지';
+      //   }, 100);
+      // }
+      timer();
+
+    
+
+    }) // btn 이벤트 종료
+    function timer() {
+      if (isOn === true) {
+        clearInterval(id); // id에 해당하는 타이머 종료
+        isOn = false;
+        $btn.textContent = '시작';
+      } else if (isOn === false) {
+        id = setInterval(() => {
+          $output.textContent = ++count;
+          isOn = true;
+          $btn.textContent = '중지';
+        }, 100);
+    }}
+
+  }) // document 이벤트 종료
+
+</script>
+
+<body>
+  <div id="output">
+  </div>
+  <button id="btn">중지</button>
+
+</body>
+
+</html>
+<!-- 숫자가 0.1초마다 1씩 증가
+버튼을 누르면 멈추도록 -->
+<!-- 버튼을 누르면 0.1초마다 1씩 증가, 상자에 출력
+다시 버튼을 누르면 정지
+다시 누르면 동작
+
+버튼에 '시작' '멈춤'-->

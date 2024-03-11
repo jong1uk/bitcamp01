@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #output {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 50px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px;
+    vertical-align: middle;
+  }
+</style>
+<script>
+  let count = 0;
+  let id;
+  document.addEventListener('DOMContentLoaded', () => {
+    let $output = document.querySelector('#output');
+    const $btn = document.querySelector('#btn');
+    id = setInterval(() => {
+      $output.textContent = count;
+      count++;
+    }, 100);
+
+    btn.addEventListener("click", () => {
+      clearInterval(id); // id에 해당하는 타이머 종료
+    })
+
+  });
+
+
+</script>
+
+<body>
+  <div id="output">
+  </div>
+  <button id="btn">중지</button>
+
+</body>
+
+</html>
+<!-- 숫자가 0.1초마다 1씩 증가
+버튼을 누르면 멈추도록 -->
