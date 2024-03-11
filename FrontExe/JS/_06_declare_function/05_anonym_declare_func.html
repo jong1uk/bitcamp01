@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+        func = function(){}을 사용 시
+        func의 타입은 var이디.
+
+        func의 타입을 let으로 선언 시
+        타입 let은 중복을 허용하지 않으므로
+        동일한 함수명이 있을 경우 에러 발생.
+
+        가급적 '익명 함수'로 통일해서 사용하는 것을 권장한다.
+        */
+        let func = function () {
+            console.log('1번째 익명 함수입니다.');
+        }
+
+        function func() {
+            console.log('2번째 선언적 함수입니다.');
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
