@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const a = new Number(10);
+        a.pi = 3.14;
+        console.log(a); // 객체로 출력
+        console.log(a.valueOf); // 값만 출력
+        console.log(a.pi);
+        console.log('');
+
+        const b = new Number(200);
+        console.log(b.pi);
+
+        // Number객체 자료형 변수가 모두 상속받는 값 설정 prototype
+        Number.prototype.sample = 9;
+
+        console.log(a.sample);
+        console.log(b.sample);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
