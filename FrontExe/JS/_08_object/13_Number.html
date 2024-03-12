@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const i = 123.456789;
+
+        console.log(i.toFixed(2));
+        console.log(i.toFixed(3));
+        console.log(i.toFixed(4));
+
+        const m = Number('korea'); // korea -> number 타입으로 형변환 시도
+        console.log(m); // NaN, 형변환 불가능
+        console.log(m === NaN); // 비교 불가능
+        console.log(Number.isNaN(m)); // true, 숫자가 아닌지 확인
+
+        const n = 10 / 0;
+        console.log(n); // Infinity, 무한대
+
+        const o = -10 / 0;
+        console.log(' ');
+        console.log(o); // -Infinity, -무한대
+        console.log(Number.isFinite(n)); // false, 유한한 값인지 확인 
+        console.log(Number.isFinite(o)); // false, 유한한 값인지 확인 
+        console.log(Number.isFinite(1)); // true, 1은 유한한 값
+        console.log(Number.isFinite(10)); // true, 10은 유한한 값
+        console.log(n === Infinity);
+        console.log(o === -Infinity);
+        console.log('');
+
+
+  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner {
+            width: 400px;
+            height: 200px;
+            top: 100px;
+            left: 100px;
+            position: absolute;
+            border: 3px solid tomato;
+            box-shadow: 10px 10px #ccc;
+        }
+    </style>
+
+    <script>
+
+        /*
+    타이머를 동작시켜서 logo_01.jpg ~ logo_08.jpg로 교체하도록 만듭니다.
+    단, 방향키 상을 누르면 교체 속도가 빨라지고
+    방향키 하를 누르면 교체 속도가 느려지게 됩니다.
+    */
+        let i = function ($banner, speed) {
+            let num = 1;
+            timer2 = setInterval(() => {
+
+                $banner.src = `../../../images2/logo_0${num++}.jpg`;
+                // $banner.src = '../../../images2/logo_02.jpg';
+                if (num == 9) {
+                    num = 1;
+                }
+            }
+                , speed);
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            let speed = 1000;
+            let timer = null;
+            let $banner = document.querySelector(".banner");
+            // setInterval(() => {
+            //     $banner.src = `../../../images2/logo_0${num++}.jpg`;
+            //     // $banner.src = '../../../images2/logo_02.jpg';
+            //     console.log($banner.src);
+            //     if(num==9){
+            //         num=1;
+            //     }
+            // }  
+            // , speed);
+            timer = i($banner, speed);
+
+            document.addEventListener('keydown', function (e) {
+                console.log('입력 키 코드: ' + e.keyCode);
+
+                switch (e.keyCode) {
+                    case 38:
+                        clearInterval(timer2);
+                        speed -= 200;
+                        timer = i($banner, speed);
+                        console.log(speed);
+                        break;
+                    case 40:
+                        clearInterval(timer2);
+                        console.log(num);
+                        speed += 200;
+                        timer = i($banner, speed);
+                        console.log(speed);
+
+                        break;
+                }
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <img src="../../../images2/logo_01.jpg" alt="logo" class="banner" id="banner1">
+
+</body>
+
+</html>

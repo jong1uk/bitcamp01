@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const object = {
+            name: '홍길동',
+            job: '활빈당',
+            age: 24,
+        };
+        // const {name:a, job:b, age:c} = object;
+        // const {a:name, b:job, c:age} = object;
+        const {a=name, b=job} = object;
+
+
+        console.log(a, b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

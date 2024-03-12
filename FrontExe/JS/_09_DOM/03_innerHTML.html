@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // document.addEventListener('DOMContentLoaded', ()=> {
+
+        //     document.body.innerHTML += h1('1번째 script 태그');
+        // })
+
+        /*
+        DOM의 성능이 더 빠르다
+        */
+        window.onload = function(){
+            document.body.innerHTML += ('1번째 load 이벤트 발생');
+            
+        }
+        window.addEventListener('load', function(){
+            document.body.innerHTML += ('2번째 load 이벤트 발생');
+        });
+
+         document.addEventListener('DOMContentLoaded', ()=> {
+
+            document.body.innerHTML += h1('4번째 DOM 이벤트 발생');
+        })
+    </script>
+</head>
+<body>
+  
+    
+</body>
+</html>
