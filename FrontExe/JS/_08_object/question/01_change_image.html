@@ -18,14 +18,14 @@
     </style>
 
     <script>
-
+        let num = 1;
         /*
     타이머를 동작시켜서 logo_01.jpg ~ logo_08.jpg로 교체하도록 만듭니다.
     단, 방향키 상을 누르면 교체 속도가 빨라지고
     방향키 하를 누르면 교체 속도가 느려지게 됩니다.
     */
         let i = function ($banner, speed) {
-            let num = 1;
+
             timer2 = setInterval(() => {
 
                 $banner.src = `../../../images2/logo_0${num++}.jpg`;

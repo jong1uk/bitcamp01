@@ -43,12 +43,12 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const textarea = document.querySelector('textarea');
-            const h1 = document.querySelector('h1');
+            h1 = document.querySelector('h1');
 
             textarea.addEventListener('keyup', listener)
         }) */ 
 
-        let h1 = null;
+       /* let h1 = null;
         // 화살표 함수에서는 this를 사용불가, 
         // function(event)를 사용하면 listener의 this는 textarea를 가리키게 된다.
         const listener = function(event) {
@@ -59,12 +59,29 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const textarea = document.querySelector('textarea');
-            const h1 = document.querySelector('h1');
+            h1 = document.querySelector('h1');
+
+            textarea.addEventListener('keyup', listener);
+        }); */
+
+
+        let h1 = null;
+
+        // 다른 영역의 textarea를 접근하는 방법-2
+        // 화살표 함수에서는 this를 사용하지 못하므로 function(event)를
+        // 사용하면 listener의 this는 textarea를 가리키게 된다.
+        const listener = function(event) {
+            const textarea = this;   // 이벤트 발생 시킨 객체
+            const length = textarea.value.length;
+            h1.textContent = `글자 수 : ${length}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea');
+            h1 = document.querySelector('h1');
 
             textarea.addEventListener('keyup', listener);
         });
-
-
     </script>
 </head>
 
