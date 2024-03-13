@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       /*
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea');
+            const h1 = document.querySelector('h1');
+
+            textarea.addEventListener('keyup', (event) => {
+                const length = textarea.value.length;
+                h1.textContent = `글자 수: ${length}`;
+            });
+        });
+        */
+
+        /*
+        const lisetner = (event) => {
+            const length = textarea.value.length;
+            h1.textContent = `글자 수: ${length}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea');
+            const h1 = document.querySelector('h1');
+
+            textarea.addEventListener('keyup', listener)
+        })
+        */
+        
+        /*
+        let h1= null;
+        const listener = (event) => {
+            const textarea = event.currentTarget; // 이벤트를 발생 시킨 객체
+            const length = textarea.value.length;
+            h1.textContent = `글자 수: ${length}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea');
+            const h1 = document.querySelector('h1');
+
+            textarea.addEventListener('keyup', listener)
+        }) */ 
+
+        let h1 = null;
+        // 화살표 함수에서는 this를 사용불가, 
+        // function(event)를 사용하면 listener의 this는 textarea를 가리키게 된다.
+        const listener = function(event) {
+            const textarea = this; // 이벤트를 발생 시킨 객체
+            const length = textarea.value.length;
+            h1.textContent = `글자 수: ${length}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea');
+            const h1 = document.querySelector('h1');
+
+            textarea.addEventListener('keyup', listener);
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <h1></h1>
+    <textarea></textarea>
+</body>
+
+</html>
