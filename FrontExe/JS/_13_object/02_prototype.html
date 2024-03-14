@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //생성자 함수 (객체를 생성하는 함수)
+        function Circle(radius){
+            this.radius = radius;
+
+            this.getArea = function(){
+                return Math.PI * this.radius * 2;
+            }
+        }
+        /*
+        java는 클래스의 객체들은 하나의 메서드를 사용
+
+        javascript에서는 생성자 함수로 객체를 만드는 방식은 객체마다 별도의 메서드 생성
+
+        모든 객체들이 하나의 메서드를 사용하기 위해 prototype 사용
+        */
+
+        const circle1 = new Circle(3);
+        const circle2 = new Circle(5);
+
+        console.log(circle1.getArea === circle2.getArea);
+        console.log(circle1.getArea);
+        console.log(circle2.getArea);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

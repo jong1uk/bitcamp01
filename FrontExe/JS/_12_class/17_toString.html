@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Any{
+            constructor(name){
+                this.name;
+            }
+        }
+
+        class Pet{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+
+            }
+
+            toString() {
+                return '이름:'+this.name +'\n' + '나이:'+this.age+'살';
+            }
+        }
+
+        const any = new Any('홍길동');
+        alert(any);
+        console.log(any + '');
+        const pet = new Pet('독구', 4);
+        alert(pet);
+        console.log(pet + '');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

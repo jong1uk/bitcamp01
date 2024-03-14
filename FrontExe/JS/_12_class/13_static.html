@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        class Square {
+
+            // 클래스의 스태틱 멤버, 전역 사용, 1개의 객체만 존재
+            
+            static #counter = 0;
+            static get counter() {
+                return Square.#counter;
+            }
+            static perimeterOf(length){
+                return length * 4;
+            }
+
+            static areaOf(length){
+                return length * length;
+            }
+
+            // 필드나 메서드에 #을 붙여주면 private 접근제어 설정
+            #length;
+            constructor(length) {
+                this.length = length;
+                Square.#counter++;
+            }
+            get perimeter() {
+                return 4 * this.#length;
+            }
+            get area() {
+                return this.#length * this.#length
+            }
+
+            get length() {
+                return this.#length;
+            }
+            set length(value) {
+                if (value <= 0)
+                    throw '길이는 0보다 커야 합니다.'
+
+                this.#length = value;
+            }
+
+        }
+
+        // const square = new Square(10);
+        // // square.#length = -100; // 접근 불가
+        // console.log(`정사각형의 둘레 : ${square.perimeter}`);
+        // console.log(`정사각형의 넓이 : ${square.area}`);
+        // console.log(`정사각형 한 변의 길이 : ${square.length}`);
+
+        // square.length=20; // set length(20);
+        
+        // console.log(`정사각형의 둘레 : ${square.perimeter}`);
+        // console.log(`정사각형의 넓이 : ${square.area}`);
+        // console.log(`정사각형 한 변의 길이 : ${square.length}`);
+
+
+        /* static 변수는 클래스에 단 1개만 생성되므로
+        모든 객체가 공유해서 사용하는 것으로 주로 사용된다.
+        static 함수는 객체가 만들어지기 전에 메모리에 올라가고
+        주로 공톡기능을 구현할 때 사용된다.
+        객체를 만들지 않아도 바로 호출할 수 있는 utility성 함수를 만들 때도 사용된다.
+        */
+        
+        const squareA = new Square(10);
+        const squareB = new Square(20);
+        const squareC = new Square(30);
+        console.log('지금까지 생성된 Square의 인스턴스 갯수는 ' + Square.counter +'개 입니다.');
+        console.log('한 변의 길이가 20인 정사각형의 둘레는 ' + Square.perimeterOf(20) +'입니다');
+        console.log('한 변의 길이가 30인 정사각형의 넓이는 ' + Square.areaOf(30) +'입니다');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

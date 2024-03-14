@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        class Square {
+
+            // 필드나 메서드에 #을 붙여주면 private 접근제어 설정
+            #length;
+            constructor(length) {
+                this.length = length;
+            }
+            get perimeter() {
+                return 4 * this.#length;
+            }
+            get area() {
+                return this.#length * this.#length
+            }
+
+            get length() {
+                return this.#length;
+            }
+            set length(value) {
+                if (value <= 0)
+                    throw '길이는 0보다 커야 합니다.'
+
+                this.#length = value;
+            }
+
+        }
+
+        const square = new Square(10);
+        // square.#length = -100; // 접근 불가
+        console.log(`정사각형의 둘레 : ${square.perimeter}`);
+        console.log(`정사각형의 넓이 : ${square.area}`);
+        console.log(`정사각형 한 변의 길이 : ${square.length}`);
+
+        square.length=20; // set length(20);
+        
+        console.log(`정사각형의 둘레 : ${square.perimeter}`);
+        console.log(`정사각형의 넓이 : ${square.area}`);
+        console.log(`정사각형 한 변의 길이 : ${square.length}`);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
